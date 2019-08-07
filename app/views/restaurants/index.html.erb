@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+
+<%= link_to 'Créer un resto', new_restaurant_path %>
+
+<% @restaurants.each do |restaurant| %>
+  <h3> <%= restaurant.name %> </h3>
+  <p><%= restaurant.phone_number %> - <%= restaurant.address %></p>
+  <p> <%= restaurant.category %> </p>
+  <%= link_to 'Voir', restaurant_path(restaurant) %>
+  <%= link_to 'Supprimer', restaurant_path(restaurant), method: :delete %>
+<% end %>

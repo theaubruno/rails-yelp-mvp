@@ -52,4 +52,3 @@ before_action :set_restaurant, only: [:new, :create]
     params.require(:review).permit(:content, :rating)
   end
 end
-
